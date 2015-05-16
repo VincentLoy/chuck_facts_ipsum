@@ -12,7 +12,7 @@
         button,
         textField,
         paragraph = "",
-        separation = ['. ', ', ', ' '],
+        separators = ['. ', ', ', ' '],
         i;
 
     function getRandomInt(min, max) {
@@ -24,7 +24,7 @@
             if (i === itemsNumber - 1) {
                 paragraph += tab[getRandomInt(0, tab.length - 1)];
             } else {
-                paragraph += tab[getRandomInt(0, tab.length - 1)] + separation[getRandomInt(0, separation.length - 1)];
+                paragraph += tab[getRandomInt(0, tab.length - 1)] + separators[getRandomInt(0, separators.length - 1)];
             }
         }
         return paragraph + '\n\n';

@@ -35,3 +35,12 @@ textarea {
     padding: 15px;
     font-family: 'Open Sans', sans-serif;
 }
+
+.author {
+    text-align: center;
+}
+
+.author a {
+    color: #1f4d76;
+    text-decoration: none;
+}
