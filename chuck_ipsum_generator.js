@@ -11,15 +11,20 @@
         lorem,
         button,
         textField,
+        rand,
         paragraph = "",
         separators = ['. ', ', ', ' '],
         i;
 
     function getRandomInt(min, max) {
-        return Math.floor(Math.random() * (max - min + 1)) + min;
+        rand = Math.floor(Math.random() * (max + 1 - min) + min);
+        return rand;
     }
 
     function buildParagraph(itemsNumber, tab) {
+
+        paragraph = "";
+
         for (i = 0; i < itemsNumber; i += 1) {
             if (i === itemsNumber - 1) {
                 paragraph += tab[getRandomInt(0, tab.length - 1)];
