@@ -1,0 +1,37 @@
+body, html {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: #2c3e50;
+    font-family: 'Open Sans', sans-serif;
+    background-image: url('../assets/chuck_approuved.jpg');
+    background-repeat: no-repeat;
+    background-position-x: 50px;
+    background-position-y: 85%;
+    background-attachment: fixed;
+}
+
+h1 {
+    text-align: center;
+    padding: 25px 0;
+}
+
+.button {
+    border: 2px solid #2c3e50;
+    border-radius: 2px;
+    color: #2c3e50;
+    padding: 5px 10px;
+    text-align: center;
+    display: table;
+    text-decoration: none;
+    margin: 0 auto 25px auto;
+}
+
+textarea {
+    display: block;
+    margin: auto;
+    border: 2px solid #2c3e50;
+    border-radius: 2px;
+    padding: 15px;
+    font-family: 'Open Sans', sans-serif;
+}

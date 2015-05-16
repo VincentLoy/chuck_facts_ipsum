@@ -6,10 +6,10 @@
 (function () {
     'use strict';
 
-    var factsLength,
-        request,
+    var request,
         data,
         lorem,
+        button,
         textField,
         paragraph = "",
         separation = ['. ', ', ', ' '],
@@ -31,7 +31,6 @@
     }
 
     function makeLorem(datas) {
-        factsLength = datas.facts.length;
         return buildParagraph(getRandomInt(1, 15), datas.facts)
             + buildParagraph(getRandomInt(1, 15), datas.facts)
             + buildParagraph(getRandomInt(1, 15), datas.facts)
@@ -50,6 +49,7 @@
             if (request.status >= 200 && request.status < 400) {
                 // Success
                 data = JSON.parse(request.responseText);
+                paragraph = "";
                 lorem = makeLorem(data);
                 textField = document.getElementById('textField');
                 insertLorem(textField, lorem);
@@ -66,6 +66,9 @@
     }
 
     document.addEventListener('DOMContentLoaded', function () {
-        generateLorem();
+        button = document.querySelector(".button");
+        button.addEventListener('click', function (e) {
+            generateLorem();
+        });
     });
 }());
