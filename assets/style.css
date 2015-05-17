@@ -25,20 +25,20 @@ h1 {
     text-align: center;
     display: table;
     text-decoration: none;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     margin: 0 auto 25px auto;
     transition: 0.2s ease all;
 }
 
 .button:hover {
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
 textarea {
     display: block;
     margin: auto;
     border: 1px solid rgba(44, 62, 80, 0.40);
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
     width: 90%;
     height: 50%;
     border-radius: 2px;
@@ -59,9 +59,10 @@ textarea {
 .github-buttons {
     display: table;
     margin: auto;
+    background: rgba(255, 255, 255, 0.75);
     border: 1px solid rgba(44, 62, 80, 0.40);
     border-radius: 2px;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
     padding: 15px 25px;
 }
 
