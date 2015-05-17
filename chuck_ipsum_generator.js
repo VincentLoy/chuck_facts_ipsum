@@ -22,7 +22,6 @@
     }
 
     function buildParagraph(itemsNumber, tab) {
-
         paragraph = "";
 
         for (i = 0; i < itemsNumber; i += 1) {
