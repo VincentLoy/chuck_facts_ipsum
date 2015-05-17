@@ -27,7 +27,7 @@
 
         for (i = 0; i < itemsNumber; i += 1) {
             if (i === itemsNumber - 1) {
-                paragraph += tab[getRandomInt(0, tab.length - 1)];
+                paragraph += tab[getRandomInt(0, tab.length - 1)] + separators[0];
             } else {
                 paragraph += tab[getRandomInt(0, tab.length - 1)] + separators[getRandomInt(0, separators.length - 1)];
             }
