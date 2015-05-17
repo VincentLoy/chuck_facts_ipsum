@@ -2,12 +2,13 @@ body, html {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    height: 100%;
     color: #2c3e50;
     font-family: 'Open Sans', sans-serif;
     background-image: url('../assets/chuck_approuved.jpg');
     background-repeat: no-repeat;
     background-position-x: 50px;
-    background-position-y: 85%;
+    background-position-y: 95%;
     background-attachment: fixed;
 }
 
@@ -31,9 +32,12 @@ textarea {
     display: block;
     margin: auto;
     border: 2px solid #2c3e50;
+    width: 90%;
+    height: 50%;
     border-radius: 2px;
     padding: 15px;
     font-family: 'Open Sans', sans-serif;
+    opacity: 0.8;
 }
 
 .author {
