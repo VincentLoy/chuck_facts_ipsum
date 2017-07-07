@@ -1,50 +1,74 @@
+* {
+    box-sizing: border-box;
+}
+
 body, html {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     height: 100%;
-    color: #2c3e50;
+    color: #F5F8F9;
     font-family: 'Open Sans', sans-serif;
-    background-image: url('../assets/chuck_approuved.jpg');
-    background-repeat: no-repeat;
-    background-position-x: 50px;
-    background-position-y: 95%;
+}
+
+body {
+    background-image: url('../assets/chuck_bg.jpg');
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: -150px;
     background-attachment: fixed;
 }
 
+.wrapper {
+    background-image: linear-gradient(to bottom right, rgba(34, 46, 80, 0.75) 0%, #222E50 40%);
+    width: 100%;
+    min-height: 100%;
+}
+
+.container {
+    padding: 30px;
+    width: 950px;
+    margin: auto;
+}
+
 h1 {
-    text-align: center;
+    margin: 0;
     padding: 25px 0;
+    font-family: 'Passion One', cursive;
+    line-height: 45px;
+}
+
+h1 span {
+    display: block;
+}
+
+h1 span.big {
+    font-size: 80px;
+}
+
+h1 span.small {
+    font-size: 50px;
+    transform: translateX(5px);
 }
 
 .button {
-    border: 2px solid #2c3e50;
-    border-radius: 2px;
-    color: #2c3e50;
-    padding: 5px 10px;
+    font-family: 'Passion One', cursive;
+    display: block;
+    width: 100%;
+    padding: 15px;
+    border: 3px solid #F9DA37;
+    border-radius: 8px;
+    background: #F9DA37;
+    color: #222E50;
+    font-weight: bold;
     text-align: center;
-    display: table;
+    font-size: 25px;
     text-decoration: none;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-    margin: 0 auto 25px auto;
-    transition: 0.2s ease all;
+    transition: 0.15s ease all;
 }
 
 .button:hover {
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-}
-
-textarea {
-    display: block;
-    margin: auto;
-    border: 1px solid rgba(44, 62, 80, 0.40);
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-    width: 90%;
-    height: 50%;
-    border-radius: 2px;
-    padding: 15px;
-    font-family: 'Open Sans', sans-serif;
-    opacity: 0.8;
+    opacity: 0.75;
 }
 
 .author {
@@ -52,7 +76,7 @@ textarea {
 }
 
 .author a {
-    color: #1f4d76;
+    color: #F9DA37;
     text-decoration: none;
 }
 

@@ -10,10 +10,10 @@
         data,
         lorem,
         button,
-        textField,
         rand,
         paragraph = "",
         separators = ['. ', ', ', ' '],
+        textContent = document.getElementById('content'),
         i;
 
     function getRandomInt(min, max) {
@@ -22,7 +22,9 @@
     }
 
     function buildParagraph(itemsNumber, tab) {
-        paragraph = "";
+        var p = document.createElement('P'),
+            paragraph = "";
+        p.classList.add('paragraph');
 
         for (i = 0; i < itemsNumber; i += 1) {
             if (i === itemsNumber - 1) {
@@ -31,18 +33,20 @@
                 paragraph += tab[getRandomInt(0, tab.length - 1)] + separators[getRandomInt(0, separators.length - 1)];
             }
         }
-        return paragraph + '\n\n';
+
+        p.innerHTML = paragraph;
+        return p;
     }
 
     function makeLorem(datas) {
-        return buildParagraph(getRandomInt(1, 15), datas.facts)
-            + buildParagraph(getRandomInt(1, 15), datas.facts)
-            + buildParagraph(getRandomInt(1, 15), datas.facts)
-            + buildParagraph(getRandomInt(1, 15), datas.facts);
-    }
+        while (textContent.hasChildNodes()) {
+            textContent.removeChild(textContent.lastChild);
+        }
 
-    function insertLorem(myField, myValue) {
-        myField.value = myValue;
+        textContent.appendChild(buildParagraph(getRandomInt(1, 15), datas.facts));
+        textContent.appendChild(buildParagraph(getRandomInt(1, 15), datas.facts));
+        textContent.appendChild(buildParagraph(getRandomInt(1, 15), datas.facts));
+        textContent.appendChild(buildParagraph(getRandomInt(1, 15), datas.facts));
     }
 
     function generateLorem() {
@@ -55,8 +59,6 @@
                 data = JSON.parse(request.responseText);
                 paragraph = "";
                 lorem = makeLorem(data);
-                textField = document.getElementById('textField');
-                insertLorem(textField, lorem);
             } else {
                 console.error('Error ' + request.status);
             }
@@ -76,4 +78,8 @@
             generateLorem();
         });
     });
+
+    window.setTimeout(function () {
+      generateLorem();
+    }, 500);
 }());
